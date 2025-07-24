@@ -17,7 +17,7 @@ export default function App() {
       <motion.form
 initial={{opacity:0,y:-50}}
 animate={{opacity:1,y:0}}
-transition={{duration:1}}
+transition={{duration:1,}}
         style={{
           background: "#333",
           padding: "2rem",
@@ -34,9 +34,14 @@ transition={{duration:1}}
           alert("Login submitted!");
         }}
       >
-        <h2 style={{ textAlign: "center", marginBottom: "1rem" }}>
+        <motion.h2 
+        initial={{opacity:0}}
+        animate={{opacity:1,scale:[2.3,1],rotate:360}}
+        transition={{duration:3,type:"spring"}}
+        
+        style={{ textAlign: "center", marginBottom: "1rem" }}>
           Login
-        </h2>
+        </motion.h2>
 
         <motion.input
           type="email"
